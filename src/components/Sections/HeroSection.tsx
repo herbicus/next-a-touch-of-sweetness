@@ -15,6 +15,14 @@ interface HeroSectionProps {
     };
     alt?: string;
   };
+  mobileImage?: {
+    asset?: {
+      _id: string;
+      url: string;
+      metadata?: Record<string, unknown>;
+    };
+    alt?: string;
+  };
 }
 
 const HeroSection: React.FC<HeroSectionProps> = (props) => {

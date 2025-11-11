@@ -51,6 +51,14 @@ export const HOMEPAGE_QUERY = defineQuery(`*[_id == "homepage-document-id"][0]{
           metadata
         },
         alt
+      },
+      mobileImage{
+        asset->{
+          _id,
+          url,
+          metadata
+        },
+        alt
       }
     },
     _type == "cakeCards" => {

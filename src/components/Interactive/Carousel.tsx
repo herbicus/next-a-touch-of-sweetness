@@ -105,16 +105,12 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
               key={item._key || item.title}
               style={{ width: "288px" }}
             >
-              <Card
-                className="relative aspect-square w-72 rounded-lg"
-                noPadding
-              >
+              <Card className="relative aspect-square w-72" noPadding>
                 <SanityImage
                   image={item.image}
                   alt={item.image.alt || item.title || "Carousel image"}
                   fill
                   className="object-cover"
-                  sizes="288px"
                 />
               </Card>
             </SwiperSlide>

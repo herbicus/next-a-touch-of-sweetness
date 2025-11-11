@@ -21,6 +21,14 @@ interface HeroSectionData {
     };
     alt?: string;
   };
+  mobileImage?: {
+    asset?: {
+      _id: string;
+      url: string;
+      metadata?: Record<string, unknown>;
+    };
+    alt?: string;
+  };
 }
 
 interface CakeCardData {
@@ -100,6 +108,7 @@ const ComponentRegistry: React.FC<ComponentRegistryProps> = ({ sections }) => {
                 title={section.title}
                 description={section.description}
                 image={section.image}
+                mobileImage={section.mobileImage}
               />
             );
           case "cakeCards":
