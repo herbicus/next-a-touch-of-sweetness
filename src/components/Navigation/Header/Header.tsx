@@ -9,7 +9,7 @@ import { useScrollContext } from "@/context/ScrollContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-import NextJsLockup from "@/components/SVGs/NextJsLockup";
+import LogoLockup from "@/components/SVGs/LogoLockup";
 
 import DrawerMenu from "./DrawerMenu";
 
@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 z-40 w-screen bg-white shadow-md transition-transform duration-300",
+        "fixed top-0 left-0 z-40 w-screen bg-white/50 shadow-md backdrop-blur-lg transition-transform duration-300",
         !isAboveFold && !isScrollUp && !isMenuOpen
           ? "-translate-y-full"
           : "translate-y-0"
@@ -45,13 +45,16 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
             aria-label="Home"
           >
             <span className="sr-only">Home</span>
-            <NextJsLockup className="h-6 w-auto" aria-hidden="true" />
+            <LogoLockup
+              className="text-primary h-7 w-auto sm:h-8 lg:h-10"
+              aria-hidden="true"
+            />
           </Link>
 
           {/* Hamburger Menu */}
           <button
             type="button"
-            className="focus:ring-primary-500 cursor-pointer rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:ring-2 focus:outline-none focus:ring-inset"
+            className="focus:ring-primary-500 text-primary cursor-pointer rounded-md p-2 hover:bg-gray-100 hover:text-red-800 focus:ring-2 focus:outline-none focus:ring-inset"
             onClick={() => setIsMenuOpen(true)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             title={isMenuOpen ? "Close menu" : "Open menu"}
@@ -61,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
             </span>
             <FontAwesomeIcon
               icon={faBars}
-              className="size-6"
+              className="size-4!"
               aria-hidden="true"
             />
           </button>

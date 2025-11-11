@@ -15,10 +15,17 @@ export const carouselType = defineType({
     }),
   ],
   preview: {
-    select: {},
+    select: {
+      title: "images.title",
+      media: "images.images.0.image",
+    },
     prepare(selection) {
-      const {} = selection;
-      return { title: "Carousel" };
+      const { title, media } = selection;
+      return {
+        title: "Carousel Section",
+        subtitle: title ? title : undefined,
+        media: media,
+      };
     },
   },
 });

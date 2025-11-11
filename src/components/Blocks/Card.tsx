@@ -27,8 +27,8 @@ const Card: React.FC<CardProps> = ({
   return (
     <div
       className={clsx(
-        "relative overflow-hidden rounded-xl border border-gray-200",
-        elevation ? shadowClasses[elevation] : "shadow-lg",
+        "relative overflow-hidden rounded border border-gray-200",
+        elevation ? shadowClasses[elevation] : "shadow-md",
         noPadding ? "" : "p-6",
         allowOverflow ? "" : "overflow-hidden",
         className

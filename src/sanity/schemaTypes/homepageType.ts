@@ -47,6 +47,7 @@ export const homepageType = defineType({
         defineArrayMember({ type: "cakeCards" }),
         defineArrayMember({ type: "servicesCards" }),
         defineArrayMember({ type: "carousel" }),
+        defineArrayMember({ type: "spacer" }),
         // defineArrayMember({ type: "blockContent" }),
       ],
     }),

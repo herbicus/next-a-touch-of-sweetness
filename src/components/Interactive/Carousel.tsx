@@ -16,6 +16,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import SanityImage from "@/components/Blocks/SanityImage";
+import Card from "@/components/Blocks/Card";
 
 interface CarouselImage {
   _key?: string;
@@ -104,7 +105,10 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
               key={item._key || item.title}
               style={{ width: "288px" }}
             >
-              <div className="relative aspect-square w-72 overflow-hidden rounded-lg">
+              <Card
+                className="relative aspect-square w-72 rounded-lg"
+                noPadding
+              >
                 <SanityImage
                   image={item.image}
                   alt={item.image.alt || item.title || "Carousel image"}
@@ -112,7 +116,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
                   className="object-cover"
                   sizes="288px"
                 />
-              </div>
+              </Card>
             </SwiperSlide>
           );
         })}

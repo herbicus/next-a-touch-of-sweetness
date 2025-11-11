@@ -14,6 +14,7 @@ import { heroType } from "./components/heroType";
 import { cakeCardsType } from "./components/cakeCardsType";
 import { servicesCardsType } from "./components/servicesCardsType";
 import { carouselType } from "./components/carouselType";
+import { spacerType } from "./components/spacerType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -29,5 +30,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     cakeCardsType,
     servicesCardsType,
     carouselType,
+    spacerType,
   ],
 };

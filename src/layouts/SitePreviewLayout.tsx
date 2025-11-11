@@ -25,7 +25,7 @@ export async function SitePreviewLayout({ children }: SitePreviewLayoutProps) {
       <DialogProvider>
         <Header navItems={navItems} />
 
-        <main className="relative pt-24">
+        <main className="relative">
           {children}
 
           <SanityLive />

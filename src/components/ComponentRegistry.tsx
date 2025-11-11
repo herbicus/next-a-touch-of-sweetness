@@ -5,7 +5,8 @@ import type { PortableTextBlock } from "@portabletext/types";
 import HeroSection from "@/components/Sections/HeroSection";
 import CakeCardsSection from "@/components/Sections/CakeCardsSection";
 import ServicesCardsSection from "@/components/Sections/ServicesCardsSection";
-import CarouselSection from "@/components/Blocks/CarouselSection";
+import CarouselSection from "@/components/Sections/CarouselSection";
+import Spacer from "@/components/Blocks/Spacer";
 
 interface HeroSectionData {
   _type: "hero";
@@ -68,8 +69,17 @@ interface CarouselSectionData {
   };
 }
 
-type Section = HeroSectionData | CakeCardsSectionData | ServicesCardsSectionData | CarouselSectionData;
+interface SpacerSectionData {
+  _type: "spacer";
+  _key: string;
+}
 
+type Section =
+  | HeroSectionData
+  | CakeCardsSectionData
+  | ServicesCardsSectionData
+  | CarouselSectionData
+  | SpacerSectionData;
 interface ComponentRegistryProps {
   sections?: Section[];
 }
@@ -94,27 +104,22 @@ const ComponentRegistry: React.FC<ComponentRegistryProps> = ({ sections }) => {
             );
           case "cakeCards":
             return (
-              <CakeCardsSection
-                key={section._key}
-                cards={section.cards}
-              />
+              <CakeCardsSection key={section._key} cards={section.cards} />
             );
           case "servicesCards":
             return (
-              <ServicesCardsSection
-                key={section._key}
-                cards={section.cards}
-              />
+              <ServicesCardsSection key={section._key} cards={section.cards} />
             );
           case "carousel":
             return (
-              <CarouselSection
-                key={section._key}
-                images={section.images}
-              />
+              <CarouselSection key={section._key} images={section.images} />
             );
+          case "spacer":
+            return <Spacer key={section._key} />;
           default:
-            console.warn(`Unknown section type: ${(section as { _type: string })._type}`);
+            console.warn(
+              `Unknown section type: ${(section as { _type: string })._type}`
+            );
             return null;
         }
       })}
