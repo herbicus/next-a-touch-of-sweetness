@@ -24,6 +24,11 @@ const ServicesCardsSection: React.FC<ServicesCardsSectionProps> = ({
   return (
     <section id="services" className="bg-primary py-10 lg:py-20">
       <div className="site-container site-max-w site-grid">
+        <div className="col-span-full">
+          <h2 className="text-white h100 mb-4 text-center uppercase">
+            services
+          </h2>
+        </div>
         <div className="col-span-4 block w-full space-y-8 lg:col-span-10 lg:col-start-2">
           {cards.map((card, index) => (
             <ServiceCard

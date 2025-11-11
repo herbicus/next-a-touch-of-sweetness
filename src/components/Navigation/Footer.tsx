@@ -14,13 +14,30 @@ interface FooterProps {
 
 const Header: React.FC<FooterProps> = ({ navItems }) => {
   return (
-    <footer className="bg-gray-800 py-20">
+    <footer className="py-20">
       <div className="site-container site-max-w">
-        <div className="block space-y-4">
+        <div className="block space-y-10">
+          <h2 className="text-primary text-center font-black uppercase font-sans h100">
+            Contact
+          </h2>
+
+          <div className="text-primary space-y-6 text-base font-light text-pretty sm:text-lg">
+            <div className="block space-y-1">
+              <h2 className="font-heading h200 text-center uppercase">
+                Laura Nielsen Torres
+              </h2>
+              <span className="block text-center text-xs font-black tracking-widest uppercase">
+                Pastry Chef
+              </span>
+            </div>
+
+            <span className="h300 block text-center">Ann Arbor, Michigan</span>
+            <span className="h300 block text-center">(678)499-4378</span>
+          </div>
           {/* Logo */}
-          <Link
+          {/* <Link
             href="/"
-            className="block shrink-0 text-white"
+            className="block shrink-0"
             title="Home"
             aria-label="Home"
           >
@@ -30,19 +47,18 @@ const Header: React.FC<FooterProps> = ({ navItems }) => {
               aria-hidden="true"
             />
           </Link>
-
           <nav className="block space-y-4">
             {navItems.map((item, index) => (
               <Link
                 key={`drawer-menu-item-${index}`}
                 href={item.value}
-                className="block text-lg font-medium text-white hover:underline"
+                className="block text-lg font-medium hover:underline"
                 aria-label={item.name}
               >
                 {item.name}
               </Link>
             ))}
-          </nav>
+          </nav> */}
         </div>
       </div>
     </footer>

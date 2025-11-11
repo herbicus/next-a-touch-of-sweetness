@@ -162,10 +162,9 @@ const Hero: React.FC<HeroProps> = ({
               )}
 
               {description && (
-                <PortableTextContent
-                  content={description}
-                  className="*:text-primary *:font-light"
-                />
+                <div className="text-primary text-base font-light text-pretty sm:text-lg">
+                  <PortableText value={description} />
+                </div>
               )}
             </Card>
 

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import ComponentRegistry from '@/components/ComponentRegistry';
+import ComponentRegistry from "@/components/ComponentRegistry";
 
 import type { PortableTextBlock } from "@portabletext/types";
 import type { TypedObject } from "@portabletext/types";
@@ -44,7 +44,10 @@ interface ServicesCardsSectionData {
   cards?: ServiceCardData[];
 }
 
-type Section = HeroSectionData | CakeCardsSectionData | ServicesCardsSectionData;
+type Section =
+  | HeroSectionData
+  | CakeCardsSectionData
+  | ServicesCardsSectionData;
 
 interface HomepageProps {
   sections?: Section[];

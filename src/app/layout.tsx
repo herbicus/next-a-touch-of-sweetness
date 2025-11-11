@@ -6,7 +6,7 @@ const lato = Lato({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-lato",
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "700", "900"],
 });
 
 const nixieOne = Nixie_One({

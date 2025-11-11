@@ -44,7 +44,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           {title && (
             <h4
               className={clsx(
-                "text-primary text-4xl font-bold text-balance uppercase lg:text-5xl",
+                "text-primary text-4xl font-black text-balance uppercase lg:text-5xl",
                 {
                   "lg:text-right": !isLeftLayout,
                 }
