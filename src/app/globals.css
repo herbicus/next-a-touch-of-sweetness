@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  /* Font Family */
+  --font-sans:
+    var(--font-lato), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading:
+    var(--font-nixie-one), ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
+    monospace;
+
+  /* Custom Colors */
+  --color-primary: #cf6059;
+  --color-secondary: oklch(0.21 0.034 264.665);
+  --color-tertiary: oklch(0.928 0.006 264.531);
+  --color-quaternary: oklch(0.488 0.243 264.376);
+
+  /* Custom Aspect Ratios */
+  --aspect-portrait: 9 / 16;
+  --aspect-portrait-wide: 3 / 4;
+  --aspect-landscape: 4 / 3;
+
+  /* Custom Font Sizes */
+  --font-size-2xs: 0.625rem; /* 10px */
+  --font-size-3xs: 0.5rem; /* 8px */
+
+  /* Custom Max Widths */
+  --max-width-8xl: 90rem; /* 1440px */
+  --max-width-9xl: 108rem; /* 1728px */
+}
+
+@import "../styles/layout.css";
+@import "../styles/typography.css";
