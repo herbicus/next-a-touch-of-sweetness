@@ -1,6 +1,11 @@
 import React from "react";
-import { PortableTextContent } from "@/components/Blocks/PortableTextContent";
+import clsx from "clsx";
+
+import { PortableText } from "@portabletext/react";
 import Card from "@/components/Blocks/Card";
+
+import Button from "@/components/Controls/Button";
+
 import type { TypedObject } from "@portabletext/types";
 
 interface ServiceCardProps {
@@ -19,38 +24,50 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <Card
       elevation="md"
-      className="rounded-lg border-0 bg-white p-8 lg:p-12"
+      className="rounded-lg border-0 bg-white p-8 lg:p-10"
       noPadding={true}
     >
       <div
-        className={`grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center ${
-          !isLeftLayout ? "lg:grid-flow-dense" : ""
-        }`}
+        className={clsx(
+          "grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-2 lg:items-start",
+          {
+            "lg:grid-flow-dense": !isLeftLayout,
+          }
+        )}
       >
         {/* Title Section */}
         <div
-          className={`${isLeftLayout ? "order-1" : "order-2 lg:col-start-2"}`}
+          className={clsx("order-1", {
+            "lg:order-2 lg:col-start-2": !isLeftLayout,
+          })}
         >
           {title && (
-            <h3 className="font-heading font-normal text-3xl text-primary lg:text-4xl">
+            <h4
+              className={clsx(
+                "text-primary text-4xl font-bold text-balance uppercase lg:text-5xl",
+                {
+                  "lg:text-right": !isLeftLayout,
+                }
+              )}
+            >
               {title}
-            </h3>
+            </h4>
           )}
         </div>
 
         {/* Description and Button Section */}
         <div
-          className={`${isLeftLayout ? "order-2" : "order-1 lg:col-start-1"}`}
+          className={clsx(isLeftLayout ? "order-2" : "order-1 lg:col-start-1")}
         >
           {description && (
-            <div className="mb-6 text-gray-700">
-              <PortableTextContent content={description} />
+            <div className="text-primary mb-6 flex-1 text-lg font-normal text-pretty [&_strong]:tracking-wide">
+              <PortableText value={description} />
             </div>
           )}
 
-          <button className="rounded-lg border-2 border-primary bg-white px-6 py-3 text-primary transition-colors hover:bg-primary hover:text-white">
+          <Button tone="medium" href="#">
             Find out more
-          </button>
+          </Button>
         </div>
       </div>
     </Card>

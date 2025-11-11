@@ -1,67 +1,61 @@
 @utility site-display {
   font-size: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
-  @apply leading-tight font-bold tracking-tight;
+  @apply font-bold tracking-tight;
 }
 
 @utility site-display-medium {
   font-size: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
-  @apply leading-tight font-bold tracking-tight;
+  @apply font-bold tracking-tight;
 }
 
 @utility site-display-small {
   font-size: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
-  @apply leading-tight font-bold tracking-tight;
+  @apply font-bold tracking-tight;
 }
 
-h1,
-.h100 {
+@utility h100 {
   font-family: var(--font-heading);
-  @apply font-heading text-5xl leading-tight font-normal;
+  @apply font-heading text-5xl font-normal;
 }
 
-h2,
-.h200 {
+@utility h200 {
   font-family: var(--font-heading);
-  @apply font-heading text-4xl leading-tight font-normal;
+  @apply font-heading text-4xl font-normal;
 }
 
-h3,
-.h300 {
+@utility h300 {
   font-family: var(--font-heading);
   @apply font-heading text-3xl font-normal;
 }
 
-h4,
-.h400 {
+@utility h400 {
   @apply text-2xl leading-snug font-bold;
 }
 
-h5,
-.h500 {
+@utility h500 {
   @apply text-xl leading-normal font-bold;
 }
 
-h6,
-.h600 {
+@utility h600 {
   @apply text-lg leading-normal font-bold;
 }
 
-.body-small {
+@utility body-small {
   @apply text-sm leading-relaxed font-normal;
 }
 
-.subtitle {
+@utility subtitle {
   @apply text-lg leading-normal font-normal;
 }
 
-.subtitle-small {
+@utility subtitle-small {
   @apply text-base leading-normal font-medium;
 }
 
-.caption {
+@utility caption {
   @apply text-xs leading-normal font-normal text-gray-400;
 }
 
-.overline {
+@utility overline {
   @apply rounded bg-gray-600 px-2 py-1 text-xs font-medium tracking-wider text-white uppercase;
 }

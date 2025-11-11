@@ -36,7 +36,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ images }) => {
   }
 
   return (
-    <section className="relative overflow-hidden bg-white py-16 lg:py-24">
+    <section className="relative overflow-hidden bg-white py-10 lg:py-20">
       {images.title && (
         <h2 className="mb-8 text-center uppercase text-primary h100">
           {images.title}

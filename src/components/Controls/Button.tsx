@@ -32,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({
   // Theme-based classes (for high emphasis)
   const themeClasses = {
     primary:
-      "text-white bg-primary border-primary hover:bg-blue-800 hover:border-blue-800 focus:ring-blue-500",
+      "text-white bg-primary border-primary hover:bg-primary/90 hover:border-primary/90 focus:ring-primary",
     secondary:
       "text-white bg-secondary border-secondary hover:bg-gray-700 hover:border-gray-900 focus:ring-gray-500",
     tertiary:
@@ -81,7 +81,7 @@ const Button: React.FC<ButtonProps> = ({
 
   // Base classes for all buttons
   const baseClasses =
-    "cursor-pointer font-medium rounded-md border focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors";
+    "cursor-pointer inline-flex gap-2 items-center justify-center font-medium tracking-wide capitalize rounded-md shadow-sm border focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors";
 
   // Check if link is external
   const isExternalLink =

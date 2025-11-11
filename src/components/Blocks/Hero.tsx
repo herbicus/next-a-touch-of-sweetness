@@ -147,7 +147,7 @@ const Hero: React.FC<HeroProps> = ({
                     components={{
                       block: {
                         normal: ({ children }) => (
-                          <h1 className="font-heading text-primary text-3xl! font-normal sm:text-5xl!">
+                          <h1 className="font-heading text-primary text-3xl font-normal sm:text-5xl">
                             {children}
                           </h1>
                         ),

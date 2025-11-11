@@ -1,6 +1,12 @@
 import React from "react";
-import { PortableTextContent } from "@/components/Blocks/PortableTextContent";
+
+import { PortableText } from "@portabletext/react";
+
+import Button from "@/components/Controls/Button";
 import Card from "@/components/Blocks/Card";
+
+import IconAsterisk from "@/components/SVGs/IconAsterisk";
+
 import type { TypedObject } from "@portabletext/types";
 
 interface CakeCardProps {
@@ -10,48 +16,37 @@ interface CakeCardProps {
 
 const CakeCard: React.FC<CakeCardProps> = ({ title, description }) => {
   return (
-    <Card
-      elevation="md"
-      className="flex h-full flex-col rounded-lg border-0 bg-white p-8"
-      noPadding={true}
-    >
+    <Card elevation="md" className="rounded-lg border-0 bg-white p-8" noPadding>
       {/* Icon */}
       <div className="mb-4 flex justify-center">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#B23E32]">
-          <span className="text-[#B23E32]">*</span>
-        </div>
+        <IconAsterisk className="text-primary size-10" />
       </div>
 
       {/* Title */}
       {title && (
-        <h3 className="font-heading font-normal mb-4 text-center text-3xl text-primary">
-          {title.split(" ").map((word, i, arr) => (
-            <React.Fragment key={i}>
-              {word}
-              {i < arr.length - 1 && <br />}
-            </React.Fragment>
-          ))}
-        </h3>
+        <h2 className="text-primary font-heading mb-4 text-center font-normal text-balance text-3xl lg:text-4xl">
+          {title}
+        </h2>
       )}
 
       {/* Separator */}
       {title && (
         <div className="mb-4 flex justify-center">
-          <div className="h-px w-16 bg-primary" />
+          <div className="bg-primary h-px w-16" />
         </div>
       )}
 
       {/* Description */}
       {description && (
-        <div className="mb-6 flex-1 text-center text-gray-600">
-          <PortableTextContent content={description} />
+        <div className="text-primary mb-6 flex-1 text-center text-base/loose font-light [&_strong]:tracking-wider">
+          <PortableText value={description} />
         </div>
       )}
 
       {/* Button */}
-      <button className="mt-auto rounded-lg bg-primary px-6 py-3 text-white transition-colors hover:bg-primary/80">
-        Find out more
-      </button>
+      <div className="flex justify-center">
+        <Button href="#">Find out more</Button>
+      </div>
     </Card>
   );
 };

@@ -1,5 +1,7 @@
 import React from "react";
+
 import ServiceCard from "@/components/Blocks/ServiceCard";
+
 import type { TypedObject } from "@portabletext/types";
 
 interface ServiceCardData {
@@ -20,9 +22,9 @@ const ServicesCardsSection: React.FC<ServicesCardsSectionProps> = ({
   }
 
   return (
-    <section className="bg-[#D66054] py-16 lg:py-24">
-      <div className="site-container site-max-w">
-        <div className="flex flex-col gap-8">
+    <section id="services" className="bg-primary py-10 lg:py-20">
+      <div className="site-container site-max-w site-grid">
+        <div className="col-span-4 block w-full space-y-8 lg:col-span-10 lg:col-start-2">
           {cards.map((card, index) => (
             <ServiceCard
               key={card._key}
@@ -38,4 +40,3 @@ const ServicesCardsSection: React.FC<ServicesCardsSectionProps> = ({
 };
 
 export default ServicesCardsSection;
-
