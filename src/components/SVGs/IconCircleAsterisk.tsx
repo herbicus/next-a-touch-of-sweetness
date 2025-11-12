@@ -10,7 +10,7 @@ const IconCircleAsterisk: React.FC<IconCircleAsteriskProps> = (props) => {
    width="85.606px"
      height="85.606px"
       viewBox="0 0 85.606 85.606"
-      enable-background="new 0 0 85.606 85.606"
+      enableBackground="new 0 0 85.606 85.606"
       {...props}
     >
       <path

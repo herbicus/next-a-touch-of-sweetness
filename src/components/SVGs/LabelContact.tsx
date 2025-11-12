@@ -10,7 +10,7 @@ const LabelContact: React.FC<LabelContactProps> = (props) => {
       width="180.429px"
       height="39.646px"
       viewBox="0 0 180.429 39.646"
-      enable-background="new 0 0 180.429 39.646"
+      enableBackground="new 0 0 180.429 39.646"
       {...props}
     >
       <g>

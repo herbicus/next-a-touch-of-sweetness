@@ -46,7 +46,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   return (
     <div className={clsx("relative w-full", className)}>
       {/* Left gradient overlay */}
-      <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-16 bg-linear-to-r from-white to-transparent" />
+      <div className="pointer-events-none absolute top-0 z-10 h-full w-16 bg-linear-to-r from-white to-transparent sm:left-0" />
 
       {/* Right gradient overlay */}
       <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-16 bg-linear-to-l from-white to-transparent" />
@@ -55,7 +55,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
       <button
         type="button"
         onClick={() => swiperRef.current?.swiper.slidePrev()}
-        className="text-primary absolute top-[42.5%] left-4 z-20 -translate-y-1/2 cursor-pointer rounded-full bg-white/30 p-3 shadow-lg transition-all hover:bg-white hover:shadow-xl"
+        className="text-primary absolute top-[42.5%] left-2 z-20 -translate-y-1/2 cursor-pointer rounded-full bg-white/30 p-3 shadow-lg transition-all hover:bg-white hover:shadow-xl sm:left-4"
         aria-label="Previous slide"
         title="Previous slide"
       >
@@ -69,7 +69,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
       <button
         type="button"
         onClick={() => swiperRef.current?.swiper.slideNext()}
-        className="text-primary absolute top-[42.5%] right-4 z-20 -translate-y-1/2 cursor-pointer rounded-full bg-white/30 p-3 shadow-lg transition-all hover:bg-white hover:shadow-xl"
+        className="text-primary absolute top-[42.5%] right-2 z-20 -translate-y-1/2 cursor-pointer rounded-full bg-white/30 p-3 shadow-lg transition-all hover:bg-white hover:shadow-xl sm:right-4"
         aria-label="Next slide"
         title="Next slide"
       >

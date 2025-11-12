@@ -10,7 +10,7 @@ const LabelCustomDesigns: React.FC<LabelCustomDesignsProps> = (props) => {
       width="143.6px"
       height="72.4px"
       viewBox="0 0 143.6 72.4"
-      enable-background="new 0 0 143.6 72.4"
+      enableBackground="new 0 0 143.6 72.4"
       {...props}
     >
       <g>

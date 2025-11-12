@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Lato, Nixie_One } from "next/font/google";
+import clsx from "clsx";
+
 import "./globals.css";
 
 const lato = Lato({
@@ -27,7 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lato.variable} ${nixieOne.variable}`}>
+    <html
+      lang="en"
+      className={clsx(lato.variable, nixieOne.variable, "scroll-smooth")}
+    >
       <body className="font-sans text-base/snug text-gray-900 antialiased">
         {children}
       </body>

@@ -10,7 +10,7 @@ const LogoLockup: React.FC<LogoLockupProps> = (props) => {
       width="635.607px"
       height="85.606px"
       viewBox="0 0 635.607 85.606"
-      enable-background="new 0 0 635.607 85.606"
+      enableBackground="new 0 0 635.607 85.606"
       {...props}
     >
       <path

@@ -143,7 +143,7 @@ const Hero: React.FC<HeroProps> = ({
               noPadding
             >
               {title && (
-                <h1 className="mb-4">
+                <div className="mb-4">
                   <PortableText
                     value={title}
                     components={{
@@ -156,7 +156,7 @@ const Hero: React.FC<HeroProps> = ({
                       },
                     }}
                   />
-                </h1>
+                </div>
               )}
 
               {title && description && (

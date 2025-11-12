@@ -10,7 +10,7 @@ const LabelDessertTrays: React.FC<LabelDessertTraysProps> = (props) => {
       width="145.1px"
       height="72.4px"
       viewBox="0 0 145.1 72.4"
-      enable-background="new 0 0 145.1 72.4"
+      enableBackground="new 0 0 145.1 72.4"
       {...props}
     >
       <g>

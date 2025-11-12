@@ -10,7 +10,7 @@ const LabelCakeTastings: React.FC<LabelCakeTastingsProps> = (props) => {
       width="161.5px"
       height="71.9px"
       viewBox="0 0 161.5 71.9"
-      enable-background="new 0 0 161.5 71.9"
+      enableBackground="new 0 0 161.5 71.9"
       {...props}
     >
       <g>

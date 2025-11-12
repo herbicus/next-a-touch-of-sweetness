@@ -11,7 +11,7 @@ const Logo: React.FC<LogoProps> = (props) => {
       width="456.469px"
       height="465.404px"
       viewBox="0 0 456.469 465.404"
-      enable-background="new 0 0 456.469 465.404"
+      enableBackground="new 0 0 456.469 465.404"
       {...props}
     >
       <path

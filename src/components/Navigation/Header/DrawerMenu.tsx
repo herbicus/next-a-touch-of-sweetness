@@ -9,7 +9,17 @@ import {
 } from "@headlessui/react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faXmark,
+  faPhone,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+
+import Button from "@/components/Controls/Button";
+import Logo from "@/components/SVGs/Logo";
+
+import { CTA_URL } from "@/sanity/env";
 
 interface NavItem {
   name: string;
@@ -59,8 +69,13 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({
                 </div>
               </TransitionChild>
 
-              <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
-                <div className="relative mt-6 flex-1 px-4 sm:px-6">
+              <div className="flex h-full flex-col justify-between overflow-y-scroll bg-white py-4 shadow-xl">
+                <div className="relative flex-1 space-y-10 px-4 sm:px-6">
+                  <Logo
+                    className="text-primary h-20 w-auto"
+                    aria-hidden="true"
+                  />
+
                   <nav className="flex flex-col">
                     {navItems.map((item, index) => (
                       <Link
@@ -77,6 +92,63 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({
                       </Link>
                     ))}
                   </nav>
+                </div>
+
+                <div className="my-10 w-full border-t border-gray-200 px-4 sm:px-6">
+                  <nav className="mx-auto flex items-center justify-center gap-8 py-6">
+                    <a
+                      href={CTA_URL}
+                      className="text-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook"
+                      title="Facebook"
+                    >
+                      <span className="sr-only">Facebook</span>
+                      <FontAwesomeIcon
+                        icon={faFacebook}
+                        className="size-6!"
+                        aria-hidden="true"
+                      />
+                    </a>
+
+                    <a
+                      href="mailto:laurason1@aim.com"
+                      className="text-primary"
+                      aria-label="Email"
+                      title="Email"
+                    >
+                      <span className="sr-only">Email</span>
+                      <FontAwesomeIcon
+                        icon={faEnvelope}
+                        className="size-6!"
+                        aria-hidden="true"
+                      />
+                    </a>
+
+                    <a
+                      href="tel:6784994378"
+                      className="text-primary"
+                      aria-label="Phone"
+                      title="Phone"
+                    >
+                      <span className="sr-only">Phone</span>
+                      <FontAwesomeIcon
+                        icon={faPhone}
+                        className="size-6!"
+                        aria-hidden="true"
+                      />
+                    </a>
+                  </nav>
+
+                  <Button
+                    href={CTA_URL}
+                    className="w-full"
+                    aria-label="Facebook"
+                    title="Facebook"
+                  >
+                    Find Out More
+                  </Button>
                 </div>
               </div>
             </DialogPanel>

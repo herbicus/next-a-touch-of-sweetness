@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
               <a
                 key={item.value}
                 href={item.value}
-                className="text-primary font-semibold tracking-wide uppercase"
+                className="text-primary font-semibold tracking-wide uppercase transition-colors hover:text-primary/75"
                 aria-label={item.name}
                 title={item.name}
               >
