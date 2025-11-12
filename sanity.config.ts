@@ -26,7 +26,7 @@ export default defineConfig({
   dataset,
   // Add and edit the content schema in the './sanity/schemaTypes' folder
   schema,
-  title: "Nextjs Sanity Starter Kit",
+  title: "A Touch of Sweetness",
   icon: StudioLogo,
   plugins: [
     structureTool({ structure }),

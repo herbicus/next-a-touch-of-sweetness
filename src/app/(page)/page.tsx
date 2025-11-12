@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "A Touch of Sweetness",
     description: "Handmade cakes and desserts for your special occasions",
-    images: ["/images/meta/fallback-og-image.jpg"],
+    images: ["/images/meta/social-share-1200x628.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "A Touch of Sweetness",
     description: "Handmade cakes and desserts for your special occasions",
-    images: ["/images/meta/fallback-og-image.jpg"],
+    images: ["/images/meta/social-share-1200x628.png"],
   },
 };
 
