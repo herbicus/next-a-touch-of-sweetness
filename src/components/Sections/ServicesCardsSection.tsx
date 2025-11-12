@@ -22,10 +22,13 @@ const ServicesCardsSection: React.FC<ServicesCardsSectionProps> = ({
   }
 
   return (
-    <section id="services" className="bg-primary py-10 lg:py-20">
+    <section
+      id="services"
+      className="bg-primary relative z-1 py-10 shadow-xl lg:py-20"
+    >
       <div className="site-container site-max-w site-grid">
         <div className="col-span-full">
-          <h2 className="text-white h100 mb-4 text-center uppercase">
+          <h2 className="h100 mb-4 text-center text-white uppercase">
             services
           </h2>
         </div>

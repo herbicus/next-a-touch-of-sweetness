@@ -55,28 +55,28 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
       <button
         type="button"
         onClick={() => swiperRef.current?.swiper.slidePrev()}
-        className="text-primary absolute top-1/2 left-4 z-20 -translate-y-1/2 rounded-full bg-white/50 p-3 shadow-lg transition-all hover:bg-white hover:shadow-xl"
+        className="text-primary absolute top-[42.5%] left-4 z-20 -translate-y-1/2 cursor-pointer rounded-full bg-white/30 p-3 shadow-lg transition-all hover:bg-white hover:shadow-xl"
         aria-label="Previous slide"
         title="Previous slide"
       >
         <span className="sr-only">Previous slide</span>
         <FontAwesomeIcon
           icon={faChevronLeft}
-          className="text-xl"
+          className="size-6!"
           aria-hidden="true"
         />
       </button>
       <button
         type="button"
         onClick={() => swiperRef.current?.swiper.slideNext()}
-        className="text-primary absolute top-1/2 right-4 z-20 -translate-y-1/2 rounded-full bg-white/50 p-3 shadow-lg transition-all hover:bg-white hover:shadow-xl"
+        className="text-primary absolute top-[42.5%] right-4 z-20 -translate-y-1/2 cursor-pointer rounded-full bg-white/30 p-3 shadow-lg transition-all hover:bg-white hover:shadow-xl"
         aria-label="Next slide"
         title="Next slide"
       >
         <span className="sr-only">Next slide</span>
         <FontAwesomeIcon
           icon={faChevronRight}
-          className="text-xl"
+          className="size-6!"
           aria-hidden="true"
         />
       </button>
