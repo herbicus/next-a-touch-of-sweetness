@@ -6,6 +6,8 @@ import Card from "@/components/Blocks/Card";
 
 import Button from "@/components/Controls/Button";
 
+import { CTA_URL } from "@/sanity/env";
+
 import type { TypedObject } from "@portabletext/types";
 
 interface ServiceCardProps {
@@ -60,12 +62,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           className={clsx(isLeftLayout ? "order-2" : "order-1 lg:col-start-1")}
         >
           {description && (
-            <div className="text-primary mb-6 flex-1 text-lg font-normal text-pretty [&_strong]:tracking-wide">
+            <div className="text-primary mb-6 flex-1 text-base font-normal text-pretty [&_strong]:tracking-wide">
               <PortableText value={description} />
             </div>
           )}
 
-          <Button tone="medium" href="#">
+          <Button tone="medium" href={CTA_URL}>
             Find out more
           </Button>
         </div>

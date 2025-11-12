@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
           {/* Hamburger Menu */}
           <button
             type="button"
-            className="focus:ring-primary-500 text-primary cursor-pointer rounded-md p-2 hover:bg-gray-100 hover:text-red-800 focus:ring-2 focus:outline-none focus:ring-inset"
+            className="focus:ring-primary text-primary cursor-pointer rounded-md p-2 hover:bg-gray-100 hover:text-red-800 focus:ring-2 focus:outline-none focus:ring-inset"
             onClick={() => setIsMenuOpen(true)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             title={isMenuOpen ? "Close menu" : "Open menu"}

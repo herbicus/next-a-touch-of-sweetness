@@ -32,7 +32,7 @@ const ServicesCardsSection: React.FC<ServicesCardsSectionProps> = ({
             services
           </h2>
         </div>
-        <div className="col-span-4 block w-full space-y-8 lg:col-span-10 lg:col-start-2">
+        <div className="col-span-4 block w-full space-y-8 lg:col-span-10 lg:col-start-2 xl:col-span-8 xl:col-start-3">
           {cards.map((card, index) => (
             <ServiceCard
               key={card._key}

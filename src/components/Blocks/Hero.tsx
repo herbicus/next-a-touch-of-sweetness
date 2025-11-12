@@ -8,10 +8,12 @@ import { useScrollContext } from "@/context/ScrollContext";
 import { PortableText } from "@portabletext/react";
 
 import SanityImage from "@/components/Blocks/SanityImage";
-import { PortableTextContent } from "@/components/Blocks/PortableTextContent";
+import Button from "@/components/Controls/Button";
 
 import Card from "@/components/Blocks/Card";
 import Logo from "@/components/SVGs/Logo";
+
+import { CTA_URL } from "@/sanity/env";
 
 import type { TypedObject } from "@portabletext/types";
 import type { PortableTextBlock } from "@portabletext/types";
@@ -162,10 +164,14 @@ const Hero: React.FC<HeroProps> = ({
               )}
 
               {description && (
-                <div className="text-primary text-base font-light text-pretty sm:text-lg">
+                <div className="text-primary mb-8 text-base font-light text-pretty sm:text-lg">
                   <PortableText value={description} />
                 </div>
               )}
+
+              <Button href={CTA_URL} size="sm">
+                Find out more
+              </Button>
             </Card>
 
             {/* Right: Logo */}

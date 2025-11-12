@@ -7,6 +7,8 @@ import Card from "@/components/Blocks/Card";
 
 import IconAsterisk from "@/components/SVGs/IconAsterisk";
 
+import { CTA_URL } from "@/sanity/env";
+
 import type { TypedObject } from "@portabletext/types";
 
 interface CakeCardProps {
@@ -24,7 +26,7 @@ const CakeCard: React.FC<CakeCardProps> = ({ title, description }) => {
 
       {/* Title */}
       {title && (
-        <h2 className="text-primary font-heading mb-4 text-center font-normal text-balance text-3xl lg:text-4xl">
+        <h2 className="text-primary font-heading mb-4 text-center text-3xl font-normal text-balance lg:text-4xl">
           {title}
         </h2>
       )}
@@ -45,7 +47,7 @@ const CakeCard: React.FC<CakeCardProps> = ({ title, description }) => {
 
       {/* Button */}
       <div className="flex justify-center">
-        <Button href="#">Find out more</Button>
+        <Button href={CTA_URL}>Find out more</Button>
       </div>
     </Card>
   );
