@@ -66,8 +66,11 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({
                       <Link
                         key={`drawer-menu-item-${index}`}
                         href={item.value}
-                        className="rounded-md px-3 py-2 text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                        onClick={handleClose}
+                        className="text-primary rounded-md px-3 py-2 text-lg font-semibold tracking-wide uppercase hover:bg-gray-100"
+                        onClick={() => {
+                          handleClose();
+                          window.location.href = item.value;
+                        }}
                         aria-label={item.name}
                       >
                         {item.name}

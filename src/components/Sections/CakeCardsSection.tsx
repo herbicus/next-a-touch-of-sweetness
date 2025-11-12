@@ -18,7 +18,8 @@ const CakeCardsSection: React.FC<CakeCardsSectionProps> = ({ cards }) => {
   }
 
   return (
-    <section className="bg-primary relative z-1 py-10 shadow-xl lg:py-20">
+    <>
+    <section id="cakes" className="bg-primary relative z-1 py-10 shadow-xl lg:py-20">
       <div className="site-container site-max-w site-grid">
         <div className="col-span-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:col-span-10 lg:col-start-2 lg:grid-cols-3">
           {cards.map((card) => (
@@ -31,6 +32,9 @@ const CakeCardsSection: React.FC<CakeCardsSectionProps> = ({ cards }) => {
         </div>
       </div>
     </section>
+
+    <div id="gallery" />
+    </>
   );
 };
 

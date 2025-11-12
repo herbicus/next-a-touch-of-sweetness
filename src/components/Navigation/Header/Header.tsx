@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 z-40 w-screen bg-white/50 shadow-md backdrop-blur-lg transition-transform duration-300",
+        "fixed top-0 left-0 z-40 w-screen bg-white/75 shadow-md backdrop-blur-lg transition-transform duration-300 lg:bg-white/50",
         !isAboveFold && !isScrollUp && !isMenuOpen
           ? "-translate-y-full"
           : "translate-y-0"
@@ -51,10 +51,24 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
             />
           </Link>
 
+          <nav className="hidden items-center gap-6 lg:flex">
+            {navItems.map((item) => (
+              <a
+                key={item.value}
+                href={item.value}
+                className="text-primary font-semibold tracking-wide uppercase"
+                aria-label={item.name}
+                title={item.name}
+              >
+                {item.name}
+              </a>
+            ))}
+          </nav>
+
           {/* Hamburger Menu */}
           <button
             type="button"
-            className="focus:ring-primary text-primary cursor-pointer rounded-md p-2 hover:bg-gray-100 hover:text-red-800 focus:ring-2 focus:outline-none focus:ring-inset"
+            className="focus:ring-primary text-primary cursor-pointer rounded-md p-2 hover:bg-gray-100 hover:text-red-800 focus:ring-2 focus:outline-none focus:ring-inset lg:hidden"
             onClick={() => setIsMenuOpen(true)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             title={isMenuOpen ? "Close menu" : "Open menu"}

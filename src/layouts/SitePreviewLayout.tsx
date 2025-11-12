@@ -16,8 +16,10 @@ interface SitePreviewLayoutProps {
 export async function SitePreviewLayout({ children }: SitePreviewLayoutProps) {
   // fpo nav items
   const navItems = [
-    { name: "Home", value: "/" },
-    { name: "Posts", value: "/posts" },
+    { name: "Cakes", value: "#cakes" },
+    { name: "Gallery", value: "#gallery" },
+    { name: "Services", value: "#services" },
+    { name: "Contact", value: "#contact" },
   ];
 
   return (

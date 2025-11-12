@@ -6,6 +6,10 @@ import Card from "@/components/Blocks/Card";
 
 import Button from "@/components/Controls/Button";
 
+import LabelCakeTastings from "@/components/SVGs/LabelCakeTastings";
+import LabelCustomDesigns from "@/components/SVGs/LabelCustomDesigns";
+import LabelDessertTrays from "@/components/SVGs/LabelDessertTrays";
+
 import { CTA_URL } from "@/sanity/env";
 
 import type { TypedObject } from "@portabletext/types";
@@ -23,6 +27,37 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   const isLeftLayout = layout === "left";
 
+  const renderTitle = () => {
+    switch (title) {
+      case "Cake Tastings":
+        return (
+          <LabelCakeTastings
+            className={clsx("h-auto w-full max-w-48", {
+              "lg:ml-auto": !isLeftLayout,
+            })}
+          />
+        );
+      case "Custom Designs":
+        return (
+          <LabelCustomDesigns
+            className={clsx("h-auto w-full max-w-48", {
+              "lg:ml-auto": !isLeftLayout,
+            })}
+          />
+        );
+      case "Dessert Trays":
+        return (
+          <LabelDessertTrays
+            className={clsx("h-auto w-full max-w-48", {
+              "lg:ml-auto": !isLeftLayout,
+            })}
+          />
+        );
+      default:
+        return title;
+    }
+  };
+
   return (
     <Card
       elevation="md"
@@ -31,7 +66,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     >
       <div
         className={clsx(
-          "grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-2 lg:items-start",
+          "grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-2 lg:items-center",
           {
             "lg:grid-flow-dense": !isLeftLayout,
           }
@@ -52,7 +87,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 }
               )}
             >
-              {title}
+              {renderTitle()}
             </h4>
           )}
         </div>
